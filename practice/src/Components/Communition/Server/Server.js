@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 
 class Server extends Component {
+    constructor(props){
+        super(props);
+        this.serverRef=React.createRef();
+    }
+    getServerData=()=>{
+        alert(this.serverRef.current.value)
+    };
     render() {
         return (
             <div className='container'>
@@ -13,14 +20,14 @@ class Server extends Component {
 
                             <div className='card-body'>
                                 <div>
-                                    <input type="text" placeholder='Server Msg' className='form-control' />
+                                    <input ref={this.serverRef} type="text" placeholder='Server Msg' className='form-control' />
                                 </div>
-                                <button className='btn btn-warning mt-3'>Send</button>
+                                <button className='btn btn-warning mt-3 'onClick={this.getServerData}>Send</button>
                             </div>
                             <div className='card-footer'>
-                            <p></p>
+                                <p></p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
