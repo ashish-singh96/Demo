@@ -7,9 +7,10 @@ class Client extends Component {
         this.h2Ref = React.createRef()
     }
     getClientData = () => {
-        alert(this.clientRef.current.value)
+        //alert(this.clientRef.current.value)
         // this.h2Ref.current.innerText="Client comp changed"
         // this.h2Ref.current.style.color="red";
+        this.props.updateClientData(this.clientRef.current.value)
     };
     render() {
         return (

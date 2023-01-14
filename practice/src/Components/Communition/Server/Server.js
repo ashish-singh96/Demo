@@ -25,7 +25,7 @@ class Server extends Component {
                                 <button className='btn btn-warning mt-3 'onClick={this.getServerData}>Send</button>
                             </div>
                             <div className='card-footer'>
-                                <p></p>
+                                <p>{this.props.clientData}</p>
                             </div>
 
                         </div>
